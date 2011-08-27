@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  background-color: #00AF64;
+  height: 160px;
+}
+
+#nav_container {
+  height: 100px;
+  margin: 0px auto;
+  position: relative;
+  width: 940px;
+  -webkit-perspective: 100;
+}
+
+div.title {
+  color: #FFF;
+  display: block;
+  font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 10px;
+  position: absolute;
+  text-shadow: 1px -1px 3px rgba(0,0,0,1);
+  top: 24px;
+  -webkit-transform: translateZ( -100px );
+}
+
+
+/* The container is the outer box in which the nav items live */
+.container_back,
+.container_right,
+.container_left,
+.container_bottom,
+.container_top {
+  display: block;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+}
+.container_back {
+  background-color: #00AF64;
+  height: 160px;
+  width:  100%;
+}
+.container_right,
+.container_left {
+  background-color: #007241;
+  height: 160px;
+  width:  100px;
+}
+.container_bottom,
+.container_top {
+  background-color: #218359;
+  height: 100px;
+  width:  100%;
+}
+.container_back {
+  -moz-transform: translateZ( -100px );
+  -webkit-transform: translateZ( -100px );
+}
+.container_right    {
+  right: 0;
+  -moz-transform:    rotateY( 90deg ) translateZ( 50px ) translateX( 50px );
+  -webkit-transform: rotateY( 90deg ) translateZ( 50px ) translateX( 50px );
+}
+.container_left     {
+  -moz-transform:    rotateY( -90deg ) translateZ( 50px ) translateX( -50px );
+  -webkit-transform: rotateY( -90deg ) translateZ( 50px ) translateX( -50px );
+}
+.container_bottom   {
+  -moz-transform:    rotateX( 90deg ) translateZ( -110px ) translateY( -50px );
+  -webkit-transform: rotateX( 90deg ) translateZ( -110px ) translateY( -50px );
+}
+.container_top      {
+  -moz-transform:    rotateX( 90deg ) translateZ( 50px ) translateY( -50px );
+  -webkit-transform: rotateX( 90deg ) translateZ( 50px ) translateY( -50px );
+}
+
+
+/* Each nav item is a 'box' */
+
+.box {
+  height: 60px;
+  position: absolute;
+  top: 100px;
+  width: 200px;
+  -mo-transition:     all 0.5s ease-in-out;
+  -o-transition:      all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+
+  -webkit-transform-style: preserve-3d;
+}
+
+.box1 { left: 0; }
+.box2 { left: 370px; }
+.box3 { left: 740px; }
+
+.box figure {
+  display: block;
+  opacity: 0.6;
+  position: absolute;
+  -mo-transition:     all 0.5s ease-in-out;
+  -o-transition:      all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.box figure span {
+  color: #FFF;
+  display: block;
+  font: bold 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 50px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  text-shadow: #336633 1px 1px 3px;
+}
+
+.box .front,
+.box .back   {
+  background-color: #1B1BB3;
+  height: 60px;
+  width: 200px;
+}
+.box .right,
+.box .left   {
+  background-color: #4F4FD9;
+  height: 60px;
+  left: 50px;
+  width: 50px;
+}
+.box .top,
+.box .bottom {
+  background-color: #7373D9;
+  height: 50px;
+  top: -20px;
+  width: 200px;
+}
+.box .front    { 
+  -moz-transform:    rotateY(   0deg ) translateZ( 50px );	
+  -webkit-transform: rotateY(   0deg ) translateZ( 50px );
+}
+.box .right    {
+  -moz-transform:    rotateY(  90deg ) translateZ( 125px ) translateX(-25px);
+  -webkit-transform: rotateY(  90deg ) translateZ( 125px ) translateX(-25px);
+}
+.box .left     {
+  -moz-transform:    rotateY( -90deg ) translateZ( 75px ) translateX(25px);
+  -webkit-transform: rotateY( -90deg ) translateZ( 75px ) translateX(25px);
+}
+.box .top      {
+  -moz-transform:    rotateX(  90deg ) translateZ( 5px ) translateY(25px);
+  -webkit-transform: rotateX(  90deg ) translateZ( 5px ) translateY(25px);
+}
+.box .bottom   {
+  -moz-transform:    rotateX( -90deg ) translateZ( 55px ) translateY(-25px);
+  -webkit-transform: rotateX( -90deg ) translateZ( 55px ) translateY(-25px);
+}
+
+.box {
+  -moz-transform:    translateZ( -100px );
+  -webkit-transform: translateZ( -100px );
+}
+.box:hover, div.active {
+  -moz-transform: translateZ( -50px );
+  -webkit-transform: translateZ( -50px );
+}
+
